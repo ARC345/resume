@@ -1,0 +1,22 @@
+# Track only resume-build sources; ignore everything else in this dir
+# (personal notes, archives, working files) by default.
+/*
+
+!/base.yaml
+!/render.sh
+!/merge.py
+!/pixi.toml
+!/pixi.lock
+!/CLAUDE.md
+!/.gitignore
+!/.gitattributes
+
+# Profiles directory: track the overlay YAMLs only.
+!/profiles/
+/profiles/*
+!/profiles/*.yaml
+
+# Build output is distributed via releases, never committed.
+out/
+.build/
+rendercv_output/

@@ -1,0 +1,30 @@
+# Profile overlay: research-internship focus (SSMs / interpretability / NLP).
+#
+# Only list the sections that DIFFER from base.yaml. Everything you omit
+# (name, contact, education, experience, technical_writing, design) is
+# inherited from base. A section you DO list fully replaces base's version,
+# so copy the entries you want to keep and reorder/trim as needed.
+#
+# Render with:  pixi run render research
+cv:
+  sections:
+    # Headline retuned toward state-space / interpretability research.
+    research_interests:
+      - State-Space Models (Mamba/SSD), Linear-Time Sequence Models, Hardware-Aware Selective Scan, Hybrid Attention-SSM Models, Mechanistic Interpretability, Recurrent-Depth & Looped Transformers (Ouro/TRM/HRM), Scaling Laws.
+
+    # Example: foreground the research-relevant projects first. Edit freely.
+    # projects:
+    #   - name: LLM Lab
+    #     start_date: 2025-01
+    #     end_date: present
+    #     highlights:
+    #       - Engineered a from-scratch character-level GPT in PyTorch to study **Multi-Head Attention** and **Transformer blocks**.
+    #   - name: Lenia & Conway's Game of Life
+    #     date: 2024
+    #     highlights:
+    #       - Simulated artificial life using **Gaussian kernel evolution** and non-linear PDEs at real-time high resolution.
+
+    # Example: lead with research tooling. Edit freely.
+    # skills:
+    #   - label: Research
+    #     details: PyTorch, JAX, State-Space Models, Transformers, CUDA (basics)
