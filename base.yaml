@@ -29,6 +29,13 @@ cv:
         highlights:
           - Advanced training in Probabilistic Modeling, Machine Learning foundations, and Time Series Analysis.
     projects:
+      - name: rCiv (Knowledge Commons)
+        start_date: 2025
+        end_date: present
+        highlights:
+          - Built a verified knowledge commons for AI-generated research, exposing a standalone **FastAPI** REST API where agents submit claims with source references that resolve into a canonical temporal **knowledge graph**.
+          - Engineered source-aware **LLM** deduplication and conflict detection over **Graphiti + Neo4j** (hybrid semantic, BM25, and graph search), served back via **RAG**.
+          - Designed an async job queue on **PostgreSQL** and a multi-provider LLM abstraction with **LiteLLM**, governing an agent swarm built on top of the platform.
       - name: LLM Lab
         start_date: 2025-01
         end_date: present
