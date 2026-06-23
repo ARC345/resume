@@ -12,7 +12,7 @@ cv:
       username: ARC345
   sections:
     research_interests:
-      - DeepRL, Transformer Architectures, TRM, HRM, SSMs, Subquadratic Architectures, Linear-Time Sequence Models, Hardware-Aware Selective Scan, Structured State Space Duality (SSD), Hybrid Attention-SSM Models, Mechanistic Interpretability.
+      - Deep Learning, Transformer & State-Space Architectures, Sequence Modeling, Reinforcement Learning, Mechanistic Interpretability.
     education:
       - institution: Indian Institute of Technology, Jodhpur
         area: Applied AI and Data Science
@@ -33,36 +33,36 @@ cv:
         start_date: 2025
         end_date: present
         highlights:
-          - Built a verified knowledge commons for AI-generated research, exposing a standalone **FastAPI** REST API where agents submit claims with source references that resolve into a canonical temporal **knowledge graph**.
-          - Engineered source-aware **LLM** deduplication and conflict detection over **Graphiti + Neo4j** (hybrid semantic, BM25, and graph search), served back via **RAG**.
-          - Designed an async job queue on **PostgreSQL** and a multi-provider LLM abstraction with **LiteLLM**, governing an agent swarm built on top of the platform.
+          - Built a verified knowledge commons for AI-generated research, a **FastAPI** service where agents submit source-referenced claims that resolve into a canonical temporal **knowledge graph**.
+          - Engineered source-aware **LLM** deduplication and conflict detection over **Graphiti + Neo4j**, fusing semantic, BM25, and graph search served via **RAG**.
+          - Designed an async job queue on **PostgreSQL** and a multi-provider LLM abstraction with **LiteLLM** to govern an agent swarm on the platform.
       - name: LLM Lab
         start_date: 2025-01
         end_date: present
         highlights:
-          - Engineered a from-scratch character-level GPT implementation using PyTorch to study the internal dynamics of **Multi-Head Attention** and **Transformer blocks**.
-          - Implemented residual connections and layer normalization to optimize gradient flow and training stability.
+          - Built a character-level GPT from scratch in **PyTorch** to study the internal dynamics of **Multi-Head Attention** and **Transformer** blocks.
+          - Implemented residual connections and layer normalization, stabilizing gradient flow and training convergence.
       - name: Tailor (AI Framework)
         start_date: 2025
         end_date: present
         highlights:
-          - Built a modular AI framework using **Rust (Tauri)** and **Python**, enabling users to stitch together models and tools into custom assistants.
-          - Developed a highly customizable chat interface designed to be "tailored to you", adapting to individual user workflows and preferences.
-          - Implemented a bi-directional event system and plugin architecture, allowing seamless integration of custom tools and extensions.
+          - Built a modular AI framework in **Rust (Tauri)** and **Python** that lets users stitch models and tools into custom assistants.
+          - Designed a customizable chat interface that adapts to individual user workflows and preferences.
+          - Implemented a bi-directional event system and plugin architecture for integrating custom tools and extensions.
       - name: ARC-Engine
         date: 2023
         highlights:
-          - Developed a high-performance OpenGL-based rendering engine featuring a custom **Entity Component System (ECS)** architecture for optimized memory layout and cache locality.
-          - Designed a real-time visualization pipeline using kernels, demonstrating expertise in low-level systems and compute-heavy architectures.
+          - Developed a high-performance OpenGL rendering engine with a custom **Entity Component System (ECS)** for cache-friendly memory layout.
+          - Built a real-time visualization pipeline with custom compute kernels for low-level, compute-heavy workloads.
       - name: Lenia & Conway's Game of Life
         date: 2024
         highlights:
-          - Simulated artificial life forms using **Gaussian kernel evolution** and non-linear partial differential equations, optimizing grid updates with OpenCV for real-time high-resolution rendering.
+          - Simulated artificial life using **Gaussian kernel evolution** and non-linear PDEs, optimizing grid updates with OpenCV for real-time high-resolution rendering.
       - name: Sudoku Solver (Algorithms)
         date: 2023
         highlights:
-          - Investigated the efficiency of **Backtracking vs. Bitmasking** approaches for solving large-scale combinatorial optimization problems.
-          - Optimized search space using heuristics, reducing computation time for complex puzzles by 80%.
+          - Investigated **Backtracking vs. Bitmasking** approaches for solving large-scale combinatorial optimization problems.
+          - Pruned the search space with heuristics, cutting computation time on complex puzzles by 80%.
     technical_writing:
       - label: "Can Mamba Learn, Unlearn, and Retain Noise? ([link](https://arnav.rastogi.net.in/blog/2026/mamba-noise-learning-unlearning/))"
         details: Feb 2026
@@ -77,23 +77,24 @@ cv:
         start_date: 2026-03
         end_date: 2026-06
         highlights:
-          - Built agentic AI systems using **LangGraph** and custom orchestration logic, coordinating multi-agent **swarms** to decompose and solve complex tasks autonomously.
-          - Engineered backend services optimized for **cloud deployment** and **containerized** environments, improving scalability and reliability of production runs.
+          - Built an agentic swarm framework with **LangGraph** to orchestrate and manage a fleet of 30+ agents across complex, decomposable tasks.
+          - Engineered **RAG** over a 100+ table production database, cutting chatbot query response time by 30-40% and auto-generating result graphs.
+          - Developed backend **APIs** for a digital-signer product and its admin portal, alongside supporting production services.
       - company: Abhay Travels
         position: Research Intern
         location: ""
         start_date: 2025-02
         end_date: 2025-03
         highlights:
-          - Researched demand forecasting models for time-series data, engineering 15+ features to capture seasonal and non-linear trends.
-          - Built a predictive pipeline using **CatBoost**, outperforming baseline ARIMA models in RMSE on 5 years of historical booking data.
+          - Researched demand-forecasting models for time-series data, engineering 15+ features to capture seasonal and non-linear trends.
+          - Built a predictive pipeline with **CatBoost** that beat baseline ARIMA models on RMSE across 5 years of historical booking data.
       - company: AMR India
         position: Data Analyst Intern
         location: ""
         start_date: 2024-11
         end_date: 2024-12
         highlights:
-          - Conducted statistical analysis on 4 years of international port data to forecast article-specific demand cycles using HSN codes.
+          - Forecast article-specific demand cycles across 200+ HSN codes from ~50K port transaction records over 4 years, informing quarterly procurement planning.
     skills:
       - label: Mathematical Foundations
         details: Linear Algebra, Probability & Statistics, Optimization, Calculus

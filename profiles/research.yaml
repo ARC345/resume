@@ -12,19 +12,45 @@ cv:
     research_interests:
       - State-Space Models (Mamba/SSD), Linear-Time Sequence Models, Hardware-Aware Selective Scan, Hybrid Attention-SSM Models, Mechanistic Interpretability, Recurrent-Depth & Looped Transformers (Ouro/TRM/HRM), Scaling Laws.
 
-    # Example: foreground the research-relevant projects first. Edit freely.
-    # projects:
-    #   - name: LLM Lab
-    #     start_date: 2025-01
-    #     end_date: present
-    #     highlights:
-    #       - Engineered a from-scratch character-level GPT in PyTorch to study **Multi-Head Attention** and **Transformer blocks**.
-    #   - name: Lenia & Conway's Game of Life
-    #     date: 2024
-    #     highlights:
-    #       - Simulated artificial life using **Gaussian kernel evolution** and non-linear PDEs at real-time high resolution.
+    # Foreground research-relevant work first (architecture internals, dynamical
+    # systems), then engineering breadth. Bullets mirror base; reorder only.
+    projects:
+      - name: LLM Lab
+        start_date: 2025-01
+        end_date: present
+        highlights:
+          - Built a character-level GPT from scratch in **PyTorch** to study the internal dynamics of **Multi-Head Attention** and **Transformer** blocks.
+          - Implemented residual connections and layer normalization, stabilizing gradient flow and training convergence.
+      - name: Lenia & Conway's Game of Life
+        date: 2024
+        highlights:
+          - Simulated continuous-state artificial life via **Gaussian kernel evolution** and non-linear PDEs, probing emergent dynamics at real-time high resolution.
+      - name: rCiv (Knowledge Commons)
+        start_date: 2025
+        end_date: present
+        highlights:
+          - Built a verified knowledge commons for AI-generated research, a **FastAPI** service where agents submit source-referenced claims that resolve into a canonical temporal **knowledge graph**.
+          - Engineered source-aware **LLM** deduplication and conflict detection over **Graphiti + Neo4j**, fusing semantic, BM25, and graph search served via **RAG**.
+      - name: ARC-Engine
+        date: 2023
+        highlights:
+          - Developed a high-performance OpenGL rendering engine with a custom **Entity Component System (ECS)** for cache-friendly memory layout.
+          - Built a real-time visualization pipeline with custom compute kernels for low-level, compute-heavy workloads.
+      - name: Tailor (AI Framework)
+        start_date: 2025
+        end_date: present
+        highlights:
+          - Built a modular AI framework in **Rust (Tauri)** and **Python** that lets users stitch models and tools into custom assistants.
+      - name: Sudoku Solver (Algorithms)
+        date: 2023
+        highlights:
+          - Investigated **Backtracking vs. Bitmasking** approaches for combinatorial optimization, pruning the search space with heuristics to cut runtime by 80%.
 
-    # Example: lead with research tooling. Edit freely.
-    # skills:
-    #   - label: Research
-    #     details: PyTorch, JAX, State-Space Models, Transformers, CUDA (basics)
+    # Lead with the research stack; engineering supports it.
+    skills:
+      - label: Research
+        details: PyTorch, State-Space Models (Mamba/SSD), Transformers, Mechanistic Interpretability, JAX (learning)
+      - label: Mathematical Foundations
+        details: Linear Algebra, Probability & Statistics, Optimization, Calculus
+      - label: Engineering
+        details: Python, C++, CUDA (basics), SQL, Git
