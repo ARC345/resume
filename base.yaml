@@ -57,8 +57,7 @@ cv:
       - name: Lenia & Conway's Game of Life
         date: 2024
         highlights:
-          - Simulated artificial life forms using **Gaussian kernel evolution** and non-linear partial differential equations.
-          - Optimized grid update performance using OpenCV and kernel-based filtering, achieving real-time high-resolution simulations.
+          - Simulated artificial life forms using **Gaussian kernel evolution** and non-linear partial differential equations, optimizing grid updates with OpenCV for real-time high-resolution rendering.
       - name: Sudoku Solver (Algorithms)
         date: 2023
         highlights:
@@ -104,9 +103,13 @@ cv:
         details: C++, Python, SQL, OpenGL, CUDA (basics), Git
 design:
   theme: engineeringresumes
+  typography:
+    font_size:
+      body: 9.5pt
+    line_spacing: 0.5em
   page:
-    top_margin: 0.35in
-    bottom_margin: 0.35in
+    top_margin: 0.3in
+    bottom_margin: 0.3in
     left_margin: 0.3in
     right_margin: 0.3in
   header:
