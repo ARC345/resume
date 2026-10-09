@@ -10,10 +10,8 @@
 # Render with:  pixi run render research
 cv:
   sections:
-    # Narrowed to what the work actually backs up. Add an area back only once
-    # there's a project or result behind it.
     research_interests:
-      - State-Space Models (Mamba) and Linear-Time Sequence Modeling; Learning, Unlearning, and Robustness of LLMs under Noisy Training Data.
+      - Interpretability, Recursive Models, Novel Model Architectures, BitNets.
 
     education:
       - institution: Indian Institute of Technology, Jodhpur
