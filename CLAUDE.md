@@ -12,9 +12,12 @@
   No arg renders `base`. Run via `pixi run render <profile>`.
 
 ## Distribution
-- Source (base.yaml, profiles/, scripts) lives in the private `resume` repo.
+- Source (base.yaml, profiles/, scripts) lives in the `resume` repo, which is PUBLIC. Keep private notes and TODOs in `pvt/` (git-ignored), never in tracked files.
 - Rendered artifacts are NOT committed — they ship as release assets.
 - Releases page is the share hub: latest + history per profile, stable links.
 
 ## Rules
 - Do NOT modify resume content unless explicitly asked.
+- **Git exception:** this repo is exempt from the global "never push to `main`"
+  rule. `render.sh` commits and pushes directly to `main`, and releases are cut
+  from it; there is no `dev` branch. Approved by the owner 2026-10-09.

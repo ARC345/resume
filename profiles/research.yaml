@@ -1,56 +1,95 @@
-# Profile overlay: research-internship focus (SSMs / interpretability / NLP).
+# Profile overlay: research roles (SSMs / LLM training dynamics).
 #
 # Only list the sections that DIFFER from base.yaml. Everything you omit
-# (name, contact, education, experience, technical_writing, design) is
-# inherited from base. A section you DO list fully replaces base's version,
-# so copy the entries you want to keep and reorder/trim as needed.
+# (name, contact, design) is inherited from base. A section you DO list fully
+# replaces base's version, so copy the entries you want to keep.
+#
+# Merge note: keys not in base.yaml are appended at the END of the resume, so
+# the Mamba study lives as the first `projects` entry rather than a new section.
 #
 # Render with:  pixi run render research
 cv:
   sections:
-    # Headline retuned toward state-space / interpretability research.
+    # Narrowed to what the work actually backs up. Add an area back only once
+    # there's a project or result behind it.
     research_interests:
-      - State-Space Models (Mamba/SSD), Linear-Time Sequence Models, Hardware-Aware Selective Scan, Hybrid Attention-SSM Models, Mechanistic Interpretability, Recurrent-Depth & Looped Transformers (Ouro/TRM/HRM), Scaling Laws.
+      - State-Space Models (Mamba) and Linear-Time Sequence Modeling; Learning, Unlearning, and Robustness of LLMs under Noisy Training Data.
 
-    # Foreground research-relevant work first (architecture internals, dynamical
-    # systems), then engineering breadth. Bullets mirror base; reorder only.
-    projects:
-      - name: LLM Lab
+    education:
+      - institution: Indian Institute of Technology, Jodhpur
+        area: Applied AI and Data Science
+        degree: BS
         start_date: 2025-01
+        end_date: 2029-01
+        highlights:
+          - "CGPA: 8.63/10"
+          - "Coursework: Deep Learning, Linear Algebra, Statistical Inference."
+      - institution: MITx
+        area: Statistics and Data Science
+        degree: MicroMasters
+        start_date: 2024-09
         end_date: present
         highlights:
-          - Built a character-level GPT from scratch in **PyTorch** to study the internal dynamics of **Multi-Head Attention** and **Transformer** blocks.
-          - Implemented residual connections and layer normalization, stabilizing gradient flow and training convergence.
-      - name: Lenia & Conway's Game of Life
-        date: 2024
+          - "Coursework: Probabilistic Modeling, Machine Learning, Time Series Analysis."
+
+    projects:
+      - name: "Learning & Unlearning Noise in State-Space Models ([code](https://github.com/ARC345/learn-unlearn-mamba), [write-up](https://arnav.rastogi.net.in/blog/2026/mamba-noise-learning-unlearning/))"
+        date: 2026
         highlights:
-          - Simulated continuous-state artificial life via **Gaussian kernel evolution** and non-linear PDEs, probing emergent dynamics at real-time high resolution.
+          - Extended a QUEST Lab (IISc) study on noise learning/unlearning in transformer SLMs to **Mamba-1.4B**, running the full three-phase protocol (clean finetune → noisy finetune → clean retrain) on SQuAD across 4 noise types.
+          - Found Mamba absorbs token-level noise far more than transformers (**71% accuracy drop** under word-flip vs. 27–38% for Olmo/Qwen/Gemma/Phi-2), while counterfactual noise *raised* its accuracy, a behavior no transformer showed.
+          - Identified confounds limiting the comparison (base vs. instruction-tuned models, fuzzy-match vs. LLM-judge scoring, extra epochs inflating Phase 3 recovery to 124–133%) and documented them alongside results.
+      - name: ARC-Engine
+        date: 2023
+        highlights:
+          - Developed a high-performance OpenGL rendering engine in **C++** with a custom **Entity Component System (ECS)** for cache-friendly memory layout.
+          - Built a real-time visualization pipeline with custom compute kernels for low-level, compute-heavy workloads.
       - name: rCiv (Knowledge Commons)
         start_date: 2025
         end_date: present
         highlights:
-          - Built a verified knowledge commons for AI-generated research, a **FastAPI** service where agents submit source-referenced claims that resolve into a canonical temporal **knowledge graph**.
-          - Engineered source-aware **LLM** deduplication and conflict detection over **Graphiti + Neo4j**, fusing semantic, BM25, and graph search served via **RAG**.
-      - name: ARC-Engine
-        date: 2023
-        highlights:
-          - Developed a high-performance OpenGL rendering engine with a custom **Entity Component System (ECS)** for cache-friendly memory layout.
-          - Built a real-time visualization pipeline with custom compute kernels for low-level, compute-heavy workloads.
-      - name: Tailor (AI Framework)
-        start_date: 2025
+          - Built a **FastAPI** service where LLM agents submit source-referenced claims that resolve into a temporal **knowledge graph** (Graphiti + Neo4j), with LLM-based deduplication and conflict detection over hybrid semantic/BM25/graph retrieval.
+      - name: LLM Lab
+        start_date: 2025-01
         end_date: present
         highlights:
-          - Built a modular AI framework in **Rust (Tauri)** and **Python** that lets users stitch models and tools into custom assistants.
-      - name: Sudoku Solver (Algorithms)
-        date: 2023
-        highlights:
-          - Investigated **Backtracking vs. Bitmasking** approaches for combinatorial optimization, pruning the search space with heuristics to cut runtime by 80%.
+          - Implemented a character-level GPT from scratch in **PyTorch** (multi-head attention, residual stream, LayerNorm) as a testbed for architecture experiments.
 
-    # Lead with the research stack; engineering supports it.
+    # The Mamba post moved into Projects above.
+    technical_writing:
+      - label: "Multi-Hop Reasoning in Transformers ([link](https://arnav.rastogi.net.in/blog/2026/multi-hop-reasoning-transformers/))"
+        details: Jan 2026
+      - label: "ReLU vs GELU ([link](https://arnav.rastogi.net.in/blog/2026/relu-vs-gelu/))"
+        details: Jan 2026
+
+    # AMR India (1 month, unrelated) dropped for this profile.
+    experience:
+      - company: Hapticware Intelligence
+        position: AI Engineer Intern
+        location: Pune, India
+        start_date: 2026-03
+        end_date: 2026-06
+        highlights:
+          - Built an agent orchestration framework with **LangGraph** coordinating 30+ agents across decomposable tasks.
+          - Engineered **RAG** over a 100+ table production database, cutting chatbot query latency by 30-40% and auto-generating result graphs.
+      - company: Abhay Travels
+        position: Research Intern
+        location: India
+        start_date: 2025-02
+        end_date: 2025-03
+        highlights:
+          - Built a **CatBoost** demand-forecasting pipeline with 15+ engineered seasonal features that beat ARIMA baselines on RMSE over 5 years of booking data.
+
+    open_source:
+      - name: "OmniRoute ([PRs](https://github.com/diegosouzapw/OmniRoute/pulls?q=is%3Apr+author%3AARC345+is%3Amerged))"
+        date: 2026
+        highlights:
+          - 3 merged PRs to a 74K-star open-source LLM gateway, including Zed-hosted provider auth for model discovery, provider wire-format fixes, and repairing two live-server E2E CI suites.
+
     skills:
-      - label: Research
-        details: PyTorch, State-Space Models (Mamba/SSD), Transformers, Mechanistic Interpretability, JAX (learning)
-      - label: Mathematical Foundations
-        details: Linear Algebra, Probability & Statistics, Optimization, Calculus
+      - label: ML & Research
+        details: PyTorch, Transformers, State-Space Models (Mamba), LLM finetuning & evaluation, CatBoost
+      - label: Mathematics
+        details: Linear Algebra, Probability & Statistics, Optimization
       - label: Engineering
-        details: Python, C++, CUDA (basics), SQL, Git
+        details: Python, C++, SQL, OpenGL, FastAPI, Git
