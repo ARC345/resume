@@ -10,13 +10,31 @@
 !/CLAUDE.md
 !/.gitignore
 !/.gitattributes
+!/README.md
 
 # Profiles directory: track the overlay YAMLs only.
 !/profiles/
 /profiles/*
 !/profiles/*.yaml
 
+# Contribution updater automation.
+!/.github/
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/*.yml
+!/scripts/
+/scripts/*
+!/scripts/*.py
+!/tests/
+/tests/*
+!/tests/*.py
+
 # Build output is distributed via releases, never committed.
 out/
 .build/
 rendercv_output/
+
+# Python caches
+__pycache__/
+*.pyc
